@@ -1,0 +1,22 @@
+# Dependencies
+app/node_modules/
+
+# Next.js build output
+app/.next/
+app/out/
+
+# Environment variables (NEVER commit these)
+app/.env.local
+app/.env.*.local
+
+# TypeScript build info
+app/tsconfig.tsbuildinfo
+app/next-env.d.ts
+
+# Developer tool configs (local only)
+.claude/
+.spectra/
+
+# OS
+.DS_Store
+Thumbs.db

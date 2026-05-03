@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#5d5e63",
+                    "surface": "#fcf9f8",
+                    "on-primary-fixed": "#002108",
+                    "surface-tint": "#006e2d",
+                    "on-tertiary-fixed": "#1a1c1f",
+                    "primary-fixed": "#72fe8f",
+                    "outline": "#6d7b6c",
+                    "primary-fixed-dim": "#53e076",
+                    "on-secondary-container": "#616363",
+                    "tertiary-container": "#a0a1a6",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1c1b1b",
+                    "tertiary-fixed": "#e2e2e7",
+                    "on-error-container": "#93000a",
+                    "primary": "#006e2d",
+                    "on-primary-fixed-variant": "#005320",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-surface-variant": "#3d4a3d",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#53e076",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "surface-container-high": "#ebe7e7",
+                    "on-tertiary-fixed-variant": "#45474b",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f0edec",
+                    "error": "#ba1a1a",
+                    "secondary": "#5d5f5f",
+                    "background": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#1db954",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#bccbb9",
+                    "secondary-container": "#dfe0e0",
+                    "on-surface": "#1c1b1b",
+                    "on-primary-container": "#004118",
+                    "tertiary-fixed-dim": "#c6c6cb",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-surface": "#313030",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#454747",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary-container": "#36383c",
+                    "surface-container-low": "#f6f3f2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "container-margin": "20px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "xl": "32px",
+                    "stack-gap": "16px",
+                    "base": "8px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "h1": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "500"}],
+                    "label-sm": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            overflow-x: hidden;
+        }
+        .neo-glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .bg-blob {
+            position: fixed;
+            z-index: -1;
+            filter: blur(80px);
+            opacity: 0.4;
+            border-radius: 50%;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- Organic Light Shapes (Background) -->
+<div class="bg-blob bg-[#1DB954] w-[400px] h-[400px] -top-20 -left-20"></div>
+<div class="bg-blob bg-primary-fixed-dim w-[300px] h-[300px] top-1/2 -right-20"></div>
+<div class="bg-blob bg-tertiary-fixed w-[500px] h-[500px] -bottom-40 left-1/4"></div>
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-3 bg-white/40 dark:bg-gray-900/40 backdrop-blur-2xl border-b border-white/20 shadow-xl shadow-black/5 font-['Plus_Jakarta_Sans'] antialiased">
+<div class="flex items-center gap-8">
+<div class="text-xl font-bold tracking-tight text-[#1DB954]">MoodVoyage</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="flex items-center gap-1.5 text-[#1DB954] font-medium transition-colors hover:opacity-80" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-sm">Explore</span>
+</a>
+<a class="flex items-center gap-1.5 text-gray-600 dark:text-gray-400 font-medium transition-colors hover:text-[#1DB954]" href="#">
+<span class="material-symbols-outlined text-xl">map</span>
+<span class="text-sm">My Trips</span>
+</a>
+<a class="flex items-center gap-1.5 text-gray-600 dark:text-gray-400 font-medium transition-colors hover:text-[#1DB954]" href="#">
+<span class="material-symbols-outlined text-xl">library_music</span>
+<span class="text-sm">Moods</span>
+</a>
+<a class="flex items-center gap-1.5 text-gray-600 dark:text-gray-400 font-medium transition-colors hover:text-[#1DB954]" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+<span class="text-sm">Profile</span>
+</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-white/20 transition-all active:scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-white/20 cursor-pointer">
+<img alt="User profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHDduwy1e2T6i6QVrJjO3TdCmTGQ6ClQpgHfaZUkeu4-0ZdH_w0tansvRmSBU8HPQnD7N4ymhXhkqFCR8NFZz16pua9FTtRsrbTkIObgEZ8aRjRyMuA4X8aZiZwLxyS-P2V-rmQjsFz091cUREBUY_MyMdolh_NpcZTT8vCr43XEu30cUpVPAz1g_OwPf1sXn3V0iyZUoX3RfwrbO6MqPLAseww0J5MIbc-KQ-sENbtd1GOSpMu4f6RCvJtJICJq_QJpJZgh_eTQ4"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto pb-12">
+<!-- Hero Search Section -->
+<section class="mb-12">
+<h1 class="font-h1 text-h1 text-on-background mb-6">Explore Your Emotional Melody</h1>
+<div class="relative max-w-3xl">
+<div class="neo-glass rounded-full flex items-center px-6 py-4 shadow-2xl shadow-[#1DB954]/5">
+<span class="material-symbols-outlined text-gray-400 mr-4">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-lg font-body-lg placeholder-gray-400" placeholder="Search Spotify songs, artists or moods..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Mood Selection (Chips) -->
+<section class="mb-12 overflow-x-auto no-scrollbar flex gap-3 pb-2">
+<button class="px-6 py-2 rounded-full bg-primary-container text-on-primary font-label-sm whitespace-nowrap">All Music</button>
+<button class="px-6 py-2 rounded-full neo-glass text-on-surface-variant font-label-sm whitespace-nowrap hover:bg-white/60 transition-colors">Serenity</button>
+<button class="px-6 py-2 rounded-full neo-glass text-on-surface-variant font-label-sm whitespace-nowrap hover:bg-white/60 transition-colors">Energy</button>
+<button class="px-6 py-2 rounded-full neo-glass text-on-surface-variant font-label-sm whitespace-nowrap hover:bg-white/60 transition-colors">Melancholy</button>
+<button class="px-6 py-2 rounded-full neo-glass text-on-surface-variant font-label-sm whitespace-nowrap hover:bg-white/60 transition-colors">Focus</button>
+<button class="px-6 py-2 rounded-full neo-glass text-on-surface-variant font-label-sm whitespace-nowrap hover:bg-white/60 transition-colors">Adventure</button>
+</section>
+<!-- Featured Music Section (Bento/Grid Style) -->
+<section class="mb-12">
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-h2 text-h2 text-on-background">Recommended Mood Playlists</h2>
+<a class="text-[#1DB954] font-label-sm flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="neo-glass rounded-lg overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A lush, ethereal forest clearing at sunrise with beams of light filtering through misty trees, creating a serene and mystical atmosphere. The color palette is dominated by deep forest greens and soft golden yellows, reflecting a peaceful and calm mood. The visual style is cinematic and high-fidelity, perfectly suited for a premium music application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsY0z6287ZbZYgL9Pi2Az8nS59tt7vu4tYpX8RHGAPvSPGtmfn_J9ZLT7C8nQLfGPFhFPK0ykw29jGEds9L3c8PHltR5CpG9-ANqXXi1VWWOteOsf7HKVD5LuC4bGh4mBZcYN6KnKcu2XPB-S_nlkr7Iy4TwrTI2eawMSOlmRAPMP3H8xxg2c98Vj66h9WLRvvEMZRqSYK-AHy455cWOvSvviQrMbZK28EjbwurvXT0l5hkoJLfxe8uVbjkFt-XKfkrwCzLygzhzc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-[#1DB954] font-label-sm mb-2">Serene Forest</div>
+<h3 class="font-h2 text-xl mb-2">Morning Meditation</h3>
+<p class="text-tertiary text-body-md line-clamp-2">Let soft ambient sounds and acoustic guitar accompany your new journey.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="neo-glass rounded-lg overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A vibrant night scene of a modern city skyline reflecting neon lights in deep blues and electric purples. The atmosphere is energetic and dynamic, captured with a long exposure that creates light trails. The overall aesthetic is sleek and futuristic, aligning with a high-energy music mood for an urban setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwDz1W4GLAZLdlimP30BlNwLAYpqwwdRyDlRpq5RY4hDcaoVdQ3JL4b8JnS62VdPS34Q_lVwmP3l0DsIGUq_sbToA_BaIojjxm_hUGAcGmMIHTBSiogvtHzf4Rk0C21O0S-DdNCcmChnODgHGRsZutPttegwwr2tkg_CAWSq1Y0JQS8uU1BE1oHgYswLgziD9Fq48E2-lEPvdGyywhOF4BqVa2q1sUSQEgYB1KqMpTVAxBAWr9RRz1eYn0_djLXSid0mXhZ_LjLGU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-[#1DB954] font-label-sm mb-2">Urban Rhythm</div>
+<h3 class="font-h2 text-xl mb-2">Late Night Electronica</h3>
+<p class="text-tertiary text-body-md line-clamp-2">Deep bass and synthesizer melodies, perfect for navigating through city neon.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="neo-glass rounded-lg overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A minimalist studio photography shot of a high-end vinyl record player with a sleek metallic finish, placed on a light wooden surface. The lighting is soft and focused, creating subtle highlights on the texture of the vinyl. The color palette is warm and organic, evoking a sense of nostalgic luxury and authentic sound quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4q-BgTby6QaZPz0UG0OCU5kIYlDYOVZ7XcLupM7xamEx7ozKJUj-qF9B0rssAi1MMkeIBxHt3_vnfgQBopmUOI2D7bVyu-FA3hYKim-7Cp9vJihPsKzYsxHpWGnWIKaJcfULIznr-8DACWPVN-9xI8xKjkpOJ8Uo2JNQr11C26Z-waTla6insCX7hbtaV26v0VV3IMG4yvp7WoERwCQa1-m72Gg63y9pMCP7J-yt_27mFdyAj8aT9YL8jn10Jls9KRxikxb4uJew"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-[#1DB954] font-label-sm mb-2">Nostalgic Echoes</div>
+<h3 class="font-h2 text-xl mb-2">Classic Vinyl Session</h3>
+<p class="text-tertiary text-body-md line-clamp-2">A collection of 70s soul, revisiting those warm and authentic musical moments.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mood Selection Interaction -->
+<section class="mb-12">
+<div class="neo-glass rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-xl">
+<div class="flex-1">
+<h2 class="font-h2 text-h2 mb-4">How are you feeling today?</h2>
+<p class="text-tertiary text-body-lg mb-6">Slide the slider to adjust your mood ratio, and we'll generate a personalized voyage soundtrack for you.</p>
+<div class="relative w-full h-1 bg-gray-200/50 rounded-full mb-8">
+<div class="absolute top-1/2 -translate-y-1/2 left-[65%] w-8 h-8 rounded-full bg-white shadow-lg border border-[#1DB954] cursor-pointer flex items-center justify-center">
+<div class="w-3 h-3 bg-[#1DB954] rounded-full"></div>
+</div>
+<div class="absolute top-0 left-0 h-full bg-[#1DB954] rounded-full w-[65%]"></div>
+</div>
+<div class="flex justify-between text-label-sm text-gray-500 uppercase tracking-widest">
+<span>Calm</span>
+<span>Excited</span>
+</div>
+</div>
+<div class="w-full md:w-64 aspect-square neo-glass rounded-lg flex items-center justify-center relative overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 bg-[#1DB954]/5 group-hover:bg-[#1DB954]/10 transition-colors"></div>
+<span class="material-symbols-outlined text-6xl text-[#1DB954] animate-pulse">auto_awesome</span>
+<div class="absolute bottom-4 text-center w-full">
+<span class="text-label-sm font-bold text-[#1DB954]">Generate Mood Station</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+</body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#5d5e63",
+                    "surface": "#fcf9f8",
+                    "on-primary-fixed": "#002108",
+                    "surface-tint": "#006e2d",
+                    "on-tertiary-fixed": "#1a1c1f",
+                    "primary-fixed": "#72fe8f",
+                    "outline": "#6d7b6c",
+                    "primary-fixed-dim": "#53e076",
+                    "on-secondary-container": "#616363",
+                    "tertiary-container": "#a0a1a6",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1c1b1b",
+                    "tertiary-fixed": "#e2e2e7",
+                    "on-error-container": "#93000a",
+                    "primary": "#006e2d",
+                    "on-primary-fixed-variant": "#005320",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-surface-variant": "#3d4a3d",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#53e076",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "surface-container-high": "#ebe7e7",
+                    "on-tertiary-fixed-variant": "#45474b",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f0edec",
+                    "error": "#ba1a1a",
+                    "secondary": "#5d5f5f",
+                    "background": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#1db954",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#bccbb9",
+                    "secondary-container": "#dfe0e0",
+                    "on-surface": "#1c1b1b",
+                    "on-primary-container": "#004118",
+                    "tertiary-fixed-dim": "#c6c6cb",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-surface": "#313030",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#454747",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary-container": "#36383c",
+                    "surface-container-low": "#f6f3f2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "container-margin": "20px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "xl": "32px",
+                    "stack-gap": "16px",
+                    "base": "8px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "h1": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "500"}],
+                    "label-sm": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background: radial-gradient(circle at top left, #fcf9f8 0%, #e2f2e7 50%, #fcf9f8 100%);
+            min-height: 100vh;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(40px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background antialiased pb-12">
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-3 bg-white/40 dark:bg-gray-900/40 backdrop-blur-2xl border-b border-white/20 shadow-xl shadow-black/5">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tight text-[#1DB954] font-['Plus_Jakarta_Sans']">MoodVoyage</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-[#1DB954] transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">explore</span>
+<span class="font-label-sm">Explore</span>
+</a>
+<a class="flex items-center gap-2 text-[#1DB954] font-semibold" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="font-label-sm">My Trips</span>
+</a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-[#1DB954] transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">library_music</span>
+<span class="font-label-sm">Moods</span>
+</a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-[#1DB954] transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+<span class="font-label-sm">Profile</span>
+</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-white/20 transition-all active:scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-tertiary">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-[#1DB954] overflow-hidden p-0.5">
+<img alt="User profile avatar" class="w-full h-full object-cover rounded-full" data-alt="A professional close-up portrait of a young man with a friendly expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5HlmQ7ZzKiUHOPyt1sT9e03W2tADGR2_rAsZlLUx12MkKYVvB8NFYE0uB7URAU1rk2UzjvsxS_iP0DXecIHBfM-V8Y6Qbbiz16w6xyalMbKX5C-2OCHMZ2qcdIxSHkJZiZU_iDsCQV9ArMKcIPvDcMhG9OR7Plsy_HhKP8ZtwYHlP_jiDcSweV-sJMOjkNJokF5z1ORh3HzgDOQf9E_CWjTRB2hdFEI09fqSTnuCzZZZOg-jf5IION5zE0O5xUilYBdFWW77bL68"/>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-24">
+<header class="mb-lg">
+<h1 class="font-h1 text-h1 text-on-surface mb-xs">My Trips</h1>
+<p class="font-body-md text-tertiary">Explore your emotional map across past and future journeys</p>
+</header>
+<section class="mb-lg overflow-x-auto">
+<div class="flex gap-sm pb-2">
+<button class="px-6 py-2 rounded-full bg-primary-container text-on-primary font-label-sm whitespace-nowrap shadow-lg shadow-[#1DB954]/20">All Trips</button>
+<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant font-label-sm whitespace-nowrap hover:bg-white/60 transition-colors">Upcoming</button>
+<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant font-label-sm whitespace-nowrap hover:bg-white/60 transition-colors">Completed</button>
+<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant font-label-sm whitespace-nowrap hover:bg-white/60 transition-colors">Drafts</button>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<div class="glass-card rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#1DB954]/5 group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A panoramic landscape of Yosemite National Park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYPMYFjSpHear49tFdEx2MMCqIJybxT_-saSvFNUqHWvS9mmnqeH4flMBJqHXWBSvH_t3L2B7YcJCRSpGs_ezy03nE0O258LkAqYKrv9xCn1vQrAAVuIMhmiLDagi_1QgsSxH6tGapT4rI-nWH9ER5uawhh7QMQguYXDMx9eKdD9XJKXUX_X3TcPk7OnnnPO4SAEuL8hT3wS0kGYdlQxb8mXd5QBfLnxDaXtdbqs_G4OPLF_lYZgqNd7w093qZx4n48zEnMOC_CYc"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/60 backdrop-blur-md border border-white/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">eco</span>
+<span class="text-label-sm text-on-primary-container">Forest Serenity</span>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-h2 text-h2 text-on-surface">Yosemite Meditation</h3>
+<span class="material-symbols-outlined text-tertiary cursor-pointer hover:text-primary transition-colors">more_vert</span>
+</div>
+<div class="flex items-center gap-2 text-tertiary mb-sm">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-label-sm">Oct 15, 2024 - Oct 20, 2024</span>
+</div>
+<div class="flex items-center justify-between mt-md pt-md border-t border-white/10">
+<div class="flex -space-x-2">
+<img alt="Travel companion" class="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClPb_OyyxWchR-2ns--OZ50fwVe3qd_TYOM52m47YcPa_8aQky4zc2VGBSc6TPZ5dQSfVoB_joyB0bmHKRbtt5Vx4TjHFIw_mE_25X8fYyGErEGgStb6HfcZRjM_EuS84ngRtWQalgNvtdRDT0IKWxheZx9QHM-yWrS4OnxhGfIgzLM-qkwmtniFg3RzzhOtGbaxjMnhUqgCpY2qAbgkJ8HbNKM8aNOjFf9khOi-OBud6kVPZSY7VHUp8f0YjUSKXQml9xs_Zwfy4"/>
+<img alt="Travel companion" class="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByvWoOUhOMI_l431t6IMkKiE49b0mCEq7ZLwKjm3mboWVPgUaJjYZsPKbow0qwXqfs21zPCPiCgEormVynSY1Fzm_9rXgsu9vXm5UF-FWAm3ulNtu_NmdRbUkDtHUH32N84ubkjujwKUkEsf6_765rFIfA96o1_0YVf-DQRgUmAgbNegQv8wussC9_6sDapJOFdw_9pA9wlDgujwb0kQBCYAvXC6UOxRkaMdjN0kFEf_50ogTlMZStYk02gZnYIFjbbfGLoXiRI6Q"/>
+</div>
+<span class="text-label-sm text-[#1DB954] font-semibold">Leaving Soon</span>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#1DB954]/5 group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A vibrant street scene in Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyAVh4Y_WBZrWbwSc9sk8zngE-wu4K5WEuo2Qwe5-ZtZ-43YTt4mCMGuZgTUwa8yU8qN5EwsfCxtUpjuOdO1QgwOgIzyUrfj2GzCsvSv_tzBJoticLmPN47rSw3KWpAQ0CF-M6IYXqugMgL-GIf5scgIYLf77azEr7EuhBNLefURuPeX6v4qiMgPHw0-Qiy5_pt7uTzJc3cDQdPT0OeM70zTNrHOZIzZqanudpzoVKf4qgihJjoT7yWsgiouQ2JPoTuHfygJmzf4c"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/60 backdrop-blur-md border border-white/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">bolt</span>
+<span class="text-label-sm text-on-primary-container">Urban Rhythm</span>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-h2 text-h2 text-on-surface">Shibuya Light Exploration</h3>
+<span class="material-symbols-outlined text-tertiary cursor-pointer hover:text-primary transition-colors">more_vert</span>
+</div>
+<div class="flex items-center gap-2 text-tertiary mb-sm">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-label-sm">Aug 2, 2024 - Aug 8, 2024</span>
+</div>
+<div class="flex items-center justify-between mt-md pt-md border-t border-white/10">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[#1DB954] text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-label-sm text-tertiary">Trip Completed</span>
+</div>
+<div class="flex items-center gap-1 bg-[#1DB954]/10 px-2 py-0.5 rounded text-[#1DB954]">
+<span class="material-symbols-outlined text-xs">mood</span>
+<span class="text-label-sm">Mood 8.5</span>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#1DB954]/5 group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A tranquil aerial view of a Balinese villa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5wgmXaoHRP60Wfe5kUZehni9ix1HqRKwcFOZ-focTN4mum4xtWR4TO4XcPIOolMcwqoiXSw23-ZjTiPnhcjFB9Lh1psoP9XCWtIgBGlJJ4JigKfRdDblOu8QM7gFLK6L7i9Z-8bhTUjZF9tjPShfssMEHy8q9CP1gKyc76stsolM-zwi7bw5TtkvK4sbd1aNODoAi_oGNFLBHWZCoCkl9-gPCSSdpO81OoVGXjJbmeo_Vh3eBAZvbhHiaU7BcvZqyME6hGz1J-SU"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/60 backdrop-blur-md border border-white/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">spa</span>
+<span class="text-label-sm text-on-primary-container">Mind &amp; Body</span>
+</div>
+</div>
+<div class="p-md">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-h2 text-h2 text-on-surface">Ubud Wellness Retreat</h3>
+<span class="material-symbols-outlined text-tertiary cursor-pointer hover:text-primary transition-colors">more_vert</span>
+</div>
+<div class="flex items-center gap-2 text-tertiary mb-sm">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-label-sm">Dec 20, 2024 - Dec 27, 2024</span>
+</div>
+<div class="flex items-center justify-between mt-md pt-md border-t border-white/10">
+<span class="text-label-sm text-tertiary">Planning</span>
+<button class="px-4 py-1.5 rounded-full bg-white/50 border border-white/20 text-[#1DB954] text-label-sm font-semibold hover:bg-white transition-colors">Resume Editing</button>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-lg border-dashed border-2 border-white/40 flex flex-col items-center justify-center min-h-[400px] cursor-pointer hover:bg-white/30 transition-all duration-300 group">
+<div class="w-16 h-16 rounded-full bg-[#1DB954]/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-[#1DB954]">add</span>
+</div>
+<h4 class="font-h2 text-h2 text-on-surface">Start a New Journey</h4>
+<p class="font-body-md text-tertiary mt-2">Plan your exploration based on your current mood</p>
+</div>
+</div>
+</main>
+</body></html>
