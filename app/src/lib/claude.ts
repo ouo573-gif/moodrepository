@@ -68,7 +68,7 @@ Required JSON schema:
 }
 
 export async function generateItinerary(media: MediaItem, destination: string, days: number): Promise<Itinerary> {
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
+  const model = genAI.getGenerativeModel({ model: 'gemini-2-flash' })
   const result = await model.generateContent(buildPrompt(media, destination, days))
   const text = result.response.text()
 
