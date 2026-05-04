@@ -22,7 +22,7 @@ const DEFAULT_MOOD = { label: 'Soul Journey', icon: 'explore' }
 export default function MoodPage() {
   const router = useRouter()
   const [media, setMedia] = useState<MediaItem | null>(null)
-  const [destination, setDestination] = useState('Tokyo, Japan')
+  const [destination, setDestination] = useState('')
   const [days, setDays] = useState(5)
   const [travelers, setTravelers] = useState(2)
   const [generating, setGenerating] = useState(false)
