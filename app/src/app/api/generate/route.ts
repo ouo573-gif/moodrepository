@@ -61,7 +61,8 @@ export async function POST(req: NextRequest) {
     )
     return NextResponse.json({ itinerary })
   } catch (err) {
-    console.error(err)
-    return NextResponse.json({ itinerary: MOCK_ITINERARY, source: 'mock' })
+    const msg = err instanceof Error ? err.message : String(err)
+    console.error('Gemini error:', msg)
+    return NextResponse.json({ itinerary: MOCK_ITINERARY, source: 'mock', error: msg })
   }
 }
